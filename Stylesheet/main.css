@@ -1,0 +1,369 @@
+/* Box Model Hack */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+   clear: both;
+}
+
+/* Layout */
+body{
+ margin: 0;
+ padding: 0;
+}
+main {
+   display: flex;
+   flex-direction: column;
+   background-image: url("https://img.freepik.com/free-photo/fruit-slices-white_114579-18419.jpg?w=826&t=st=1673927662~exp=1673928262~hmac=f5758795bef3f976caa45db48f0fbc30fdfa5528aae10b47cc9a1a479614b858");
+   background-color: transparent;
+   background-position: center;
+   background-size: cover;
+}
+main, section, footer {
+   display: flex;
+   height: 500px;
+   width: 100%;
+}
+/* Navigation Bar */
+.navbar {
+   display: flex;
+   justify-content: space-around;
+   font-family:'Alfa Slab One', cursive;
+   width: 100%;
+   height: 40px;
+}
+.navbar-links {
+  display: flex;
+}
+.navbar-links ul {
+ margin: 0;
+ padding: 0;
+ display: flex;
+ font-family: 'Source Sans Pro', sans-serif;
+ width: 100vw;
+}
+.navbar-links li {
+   list-style: none;
+   width: 100px;
+}
+.navbar-links li a {
+ text-decoration: none;
+ color: black;
+ padding: 1rem;
+ align-content: flex-start;
+ width: 100%;
+}
+.navbar-links div{
+  width: 100vw;
+}
+.navbar-links li a::after{
+  content: '';
+  display: block;
+  height: 4px;
+  width: 0;
+  background-color: rgb(242 135 59);
+  transition:all .5s;
+}
+.navbar-links li a:hover::after{
+  width: 100%;
+  display: inline-block;
+}
+/*.navbar-links li:hover {
+ background-color: rgb(242 135 59);
+}
+/* Welcome Section */
+.box {
+ display: flex;
+ height: 300px;
+ flex-direction: column;
+ justify-content: flex-start;
+ padding-top: 60px;
+ width: 100vw;
+}
+/* Hamurger Icon */
+.toggle-button {
+ position: absolute;
+ top: .75rem;
+ right: 1rem;
+ display: none;
+ flex-direction: column;
+ justify-content: space-between;
+ width: 30px;
+ height: 21px;
+}
+.toggle-button .bar{
+ height: 3px;
+ width: 100%;
+ background-color: rgb(242 135 59);
+ border-radius: 10px;
+}
+section > section > span {
+ text-align: center;
+}
+.special ul{
+ display: flex;
+ justify-content: space-around;
+ font-family: 'Source Sans Pro', sans-serif;
+ align-items: stretch;
+ width: 100%;
+ margin: 0 0 10px 0;
+ padding: 0;
+}
+.special li {
+ list-style: none;
+}
+.special li a {
+ text-decoration: none;
+ color: black;
+ padding: 1rem;
+ display: block;
+}
+.special-span{
+ display: flex;
+ justify-content: center;
+ width: 100%;
+}
+.special h1 {
+ display: flex;
+ justify-content: center;
+ align-content: center;
+ width: 100%;
+}
+.special-span {
+ color: rgb(242 135 59);
+ padding-top: 60px;
+ margin: 0;
+}
+.special li:hover {
+ border-bottom: 10px solid rgb(242 135 59);
+}
+/*Carousel*/
+.carousel {
+  display: flex;
+ width: 395px;
+ height: 395px;
+ margin: auto auto;
+ position: relative;
+}
+.carousel > ul {
+  margin: 0;
+  padding: 100px;
+  list-style: none;
+ }
+.slide {
+ position: absolute;
+   inset: 0;
+   opacity: 0;
+ transition: 200ms opacity ease-in-out;
+ transition-delay: 200ms;
+}
+.slide > img {
+ display: flex;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ object-position: center;
+}
+.slide[data-active] {
+ opacity: 1;
+ z-index: 1;
+ transition-delay: 0;
+}
+.carousel-button {
+ height: 50px;
+ position: absolute;
+ background: none;
+ border: none;
+ font-size: 4rem;
+ z-index: 2;
+ transform: translateY(-50%);
+ color: rgba(242, 135, 59, .1);
+ cursor: pointer;
+ border-radius: .25rem;
+ padding: 0 .5rem;
+ background-color: rbga(0,0,0,.1)
+}
+
+.carousel-button:hover,
+.carousel-button:focus{
+ color: rgb(242 135 59);
+}
+.carousel-button:focus {
+ outline: 1px solid black;
+}
+.carousel-button.prev {
+ left: 1rem;
+}
+.carousel-button.next {
+ right: 1rem;
+}
+.special {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+   width: 100%;
+   height: 600px;
+}
+
+.header{
+  display: flex;
+  font-family: 'Alfa Slab One', cursive;
+  height: 40px;
+  justify-content: flex-start;
+  width: 100%;
+}
+p {
+  font-family: 'Alfa Slab One', cursive;
+  text-align-last: left;
+  text-indent: 40px;
+}
+.booking {
+ display: flex;
+ text-align: center;
+ flex-direction: column;
+ align-items: center;
+ width: 100%;
+}
+.booking h1{
+ font-size: 3rem;
+}
+.booking a {
+ text-decoration: none;
+ color: rgb(242 135 59);
+ font-weight: bold;
+ font-size: 2rem;
+ padding: 1rem;
+ display: block;
+}
+.halfbox{
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ background-image: url("https://images.pexels.com/photos/903376/pexels-photo-903376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+}
+.halfbox .monday{
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-self: flex-end;
+ width: 50%;
+ color: white;
+ padding: 0;
+ margin: 0;
+}
+.monday span , .five{
+  display: flex;
+  justify-content: flex-start;
+}
+.halfbox .friday {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-content: flex-start;
+  width: 50%;
+  color: white;
+  padding: 0px;
+  margin: 0;
+}
+.friday span, h5 {
+  display: flex;
+  justify-content: flex-end;
+}
+.table{
+ color: rgb(242 135 59);
+ margin-top: 30px;
+}
+.piebox{
+ background-image: url('https://images.pexels.com/photos/3933207/pexels-photo-3933207.jpeg?auto=compress&cs=tinysrgb&w=600');
+ background-size: cover;
+}
+.about{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+}
+#table-select, option{
+ background-color: rgb(242 135 59);
+ border-radius: 3px;
+ height: 20px;
+ width: 100px;
+}
+.testimony {
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ justify-content: center;
+ width: 100%;
+}
+.testimony span {
+ color: rgb(242 135 59)
+}
+.testimony h1 {
+ font-size: 3rem;
+ text-align: center;
+}
+.testimony img {
+  display: flex;
+  justify-content: center;
+  border: solid 3px rgb(242 135 59);
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  margin: auto auto;
+}
+.icon {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+.fa-facebook, .fa-twitter {
+  color: rgb(53 156 241);
+}
+/*Media Query*/
+@media screen and  (max-width: 400px) {
+    .toggle-button {
+        display: flex;
+    }
+ .navbar-links {
+   display: none;
+   width: 100%;
+ }
+ .navbar {
+   /*flex-direction: column;
+   align-items: flex-start;*/
+   display: hidden;
+ }
+ .navbar-links ul {
+   width: 100%;
+   flex-direction: column;
+ }
+ .navbar-links li{
+   text-align: center;
+ }
+ .navbar-links li a{
+   padding: .5rem 1rem;
+   
+ }
+ .navbar-links.active {
+   display: flex;
+ }
+}
