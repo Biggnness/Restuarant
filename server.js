@@ -14,6 +14,6 @@ app.get('url', (request, response)=>{
     response.json(data)
 })
 
-app.listen(PORT, ()=> {
+app.listen(process.env.PORT || PORT, ()=> {
     console.log(`Server is running on ${PORT}. You better get that`)
 })
