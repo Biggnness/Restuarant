@@ -9,6 +9,9 @@ app.get('/', (request, response) => {
 app.get('/', (request, response) => {
     response.sendFile(__dirname + '/Stylesheet/main.css')
 })
+app.get('/', (request, response) => {
+    response.sendFile(__dirname + 'js/main.js')
+})
 app.get('url', (request, response)=>{
     console.log()
     response.json(data)
